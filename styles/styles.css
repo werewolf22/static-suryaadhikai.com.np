@@ -1,0 +1,131 @@
+@import url(normalize.css);
+body{
+    background: no-repeat url(../images/werewolf-bg.png);
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+}
+
+header img{
+    margin-left: 2em;
+    width: 100px;
+}
+header h1{
+    font-family: "Dancing Script", cursive;
+    text-align: center;
+    width:85%;
+    padding-top:20px;
+    float: left;
+}
+header button{
+    border: none;
+    border-radius:10px;
+    padding:5px 10px;
+    font-size:2em;
+    background-color: #2EB096;
+    margin-top:40px;
+    cursor: pointer;
+}
+
+header button:hover{
+    opacity: 0.5;
+}
+
+header button:active{
+    background-color: #41BF5C;
+}
+
+main{
+    position: absolute;
+    top:50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.hero{
+    background-color: #55397D;
+    width: 50%;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    margin: 11em 20px;
+}
+
+.skill {
+    width: 25%;
+    float:left;
+}
+
+.skill-flow{
+    width: 100%;
+    position: absolute;
+    top: -11em;
+}
+
+.animation-frame{
+    margin: 0 auto;
+    width: 1em;
+    height: 10em;
+    background-color: cornflowerblue;
+}
+
+.box-enter{
+    width: 1em;
+    height: 10em;
+    background-color: aliceblue;
+    animation: box-enter 3s ease 0s infinite forwards;
+}
+
+@keyframes box-enter {
+    0% { clip-path: inset(-5% 25% 95% 25%); }
+    50% { clip-path: inset(45% 25% 50% 25%); }
+    100% { clip-path: inset(95% 25% -5% 25%); }
+}
+
+.hero img{
+    border-radius: 50%;
+}
+
+.portfolio {
+    width: 100%;
+    position: absolute;
+    bottom: -11em;
+}
+
+.portfolio a:hover{
+    text-decoration: underline;
+}
+
+@media (max-height: 55em) {
+    main {
+        position: static;
+        margin: 13em 0;
+        -ms-transform: none;
+        transform: none;
+    }
+}
+
+@media (max-width: 1500px) {
+    header h1{
+        width: calc(100vw - 140px);
+    }
+
+    header {
+        text-align: center;
+    }
+    header button{
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 1300px){
+    .hero{
+        width: calc(100vw - 80px);
+    }
+}
