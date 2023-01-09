@@ -3,8 +3,6 @@ body{
     background: #2D7E3E no-repeat url(../images/werewolf-bg.png);
     background-size: cover;
     min-height: 100vh;
-    position: relative;
-    
 }
 
 header{
@@ -47,10 +45,7 @@ header button:active{
 }
 
 main{
-    position: absolute;
-    top:50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    margin: 13em 0;
     width: 100%;
 }
 
@@ -65,8 +60,8 @@ main{
 }
 
 .hero p{
-    line-height: 3em;
-    font-size: large;
+    /* line-height: 3em; */
+    font-size: xx-large;
 }
 
 .skill-flow{
@@ -90,7 +85,7 @@ main{
 .box-enter{
     width: 1em;
     height: 10em;
-    background-color: aliceblue;
+    background-color: #163D1F;
     animation: box-enter 3s ease 0s infinite forwards;
 }
 
@@ -115,15 +110,6 @@ main{
     text-decoration: underline;
 }
 
-@media (max-height: 55em) {
-    main {
-        position: static;
-        margin: 13em 0;
-        -ms-transform: none;
-        transform: none;
-    }
-}
-
 @media (max-width: 1300px){
     .hero{
         width: calc(100vw - 80px);
@@ -135,6 +121,6 @@ main{
         width: 100px;
     }
     .hero p{
-        line-height: 2em;
+        font-size: x-large;
     }
 }
